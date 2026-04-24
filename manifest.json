@@ -1,0 +1,9 @@
+{
+  "name": "CruiserScan",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/ved-gaur/LethalCruiserScan",
+  "description": "Displays the total scrap value and item count currently stored in the cruiser when scanning.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305"
+  ]
+}
