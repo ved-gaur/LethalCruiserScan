@@ -172,8 +172,11 @@ internal static class CruiserValueCalculator
 
     private static bool IsCountableGrabbable(GrabbableObject grabbable)
     {
-        if (grabbable.scrapPersistedThroughRounds && CruiserScan.ExcludePersistedItems.Value)
+        if (CruiserScan.ExcludePersistedItems.Value &&
+            (grabbable.scrapPersistedThroughRounds || CruiserPersistence.IsPersisted(grabbable)))
+        {
             return false;
+        }
 
         if (grabbable is GiftBoxItem giftBoxItem && giftBoxItem.hasUsedGift)
             return false;
